@@ -1,0 +1,33 @@
+site_name: Journeyman
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.path
+    - toc.follow
+  palette:
+  - scheme: slate
+    primary: blue grey
+    accent: light blue
+extra_css:
+- stylesheets/extra.css
+nav:
+  - Getting Started:
+    - getting-started/index.md
+    - Installation: getting-started/installation.md
+    - Creating Your First Tool: getting-started/first-tool.md
+  - Configuration Files:
+    - configuration/index.md
+    - config.yml: configuration/config.md
+    - tools.yml: configuration/tools.md
+  - Attributes:
+    - attributes/index.md
+  - Commands & Permissions:
+    - commands/index.md
+  - Placeholders:
+    - placeholders/index.md
+  - Discord Support:
+    - discord/index.md
+  - Guide: 
+    - ABC: abc.md
