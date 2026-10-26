@@ -1,0 +1,129 @@
+
+.md-sidebar .md-nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2px;
+    padding: 5px 12px;
+    height: 32px;
+    width: 270px;
+
+    border-radius: 6px;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    text-align: left;
+    box-sizing: border-box;
+    transition:
+        background-color 1.0s ease,
+        color 1.0s ease;
+}
+.md-sidebar--primary .md-nav__title {
+    display: none;
+}
+/* Hover state */
+.md-sidebar .md-nav__item:not(.md-nav__item--section) > .md-nav__link:hover {
+    background-color: #3b5570;
+}
+
+/* Section header hover */
+.md-sidebar .md-nav__item--section > .md-nav__link:hover {
+    background-color: #3b5570;
+    border-radius: 6px;
+}
+
+/* Active page */
+.md-sidebar .md-nav__link--active {
+    background-color: #3b5570;
+    border-left: 5px solid #288ffa;
+    color: #288ffa !important;
+    font-weight: 600;
+    box-shadow: inset 3px 0 0 #288ffa;
+}
+
+/* Section headings */
+.md-sidebar .md-nav__item--section > .md-nav__link {
+    margin-top: 14px;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color:white;
+    opacity: 0.85;
+}
+
+/* Nested navigation indentation */
+.md-sidebar .md-nav__item .md-nav__list {
+    margin-left: 1.4rem;
+    padding-left: 0.45rem;
+    border-left: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Avoid indentation borders on the top-level list */
+.md-sidebar .md-nav--primary > .md-nav__list {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Navigation spacing */
+.md-sidebar .md-nav__list {
+    padding-bottom: 5px;
+}
+
+/* Sidebar scroll area */
+.md-sidebar__scrollwrap {
+    scrollbar-width: thin;
+    scrollbar-color:
+        var(--md-default-fg-color--lighter)
+        transparent;
+}
+.md-sidebar--primary .md-sidebar__scrollwrap {
+    overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.md-sidebar--secondary {
+    display: none !important;
+}
+
+/* Hide scrollbar until needed on WebKit browsers */
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+    width: 5px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+    background: var(--md-default-fg-color--lighter);
+
+}
+
+/* Keyboard accessibility */
+.md-sidebar .md-nav__link:focus-visible {
+    outline: 2px solid var(--md-accent-fg-color);
+    outline-offset: 2px;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .md-sidebar .md-nav__link {
+        transition: none;
+    }
+}
+@media screen and (min-width: 76.25em) {
+    .md-grid {
+        max-width: 85%;
+    }
+
+    .md-sidebar--primary {
+        margin-left: 0;
+    }
+    .md-content {
+        margin-left: 1rem;
+    }
+}
+@media screen and (min-width: 76.25em) {
+    .md-content {
+        margin-right: 0;
+    }
+}
+.md-content {
+    padding-left: 1rem;
+}
