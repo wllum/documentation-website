@@ -124,6 +124,48 @@
         margin-right: 0;
     }
 }
-.md-content {
-    padding-left: 1rem;
+
+
+
+
+/* TABLE */
+
+.md-typeset table:not([class]) {
+    width: 100%;
+    display: table;
+    font-size: 0.8rem;
+}
+
+/* Increase spacing inside cells */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+    padding: 12px 16px;
+    vertical-align: middle;
+}
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+    border-right: 1px solid var(--md-default-fg-color--lightest);
+}
+
+
+/* Keep attribute names on one line */
+.md-typeset table:not([class]) td:first-child {
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+/* Give the usage column more room */
+.md-typeset table:not([class]) td:last-child {
+    min-width: 240px;
+}
+
+/* Make code examples easier to read */
+.md-typeset table:not([class]) code {
+    font-size: 0.65rem;
+    white-space: nowrap;
+}
+
+/* Allow horizontal scrolling on smaller screens */
+.md-typeset__scrollwrap {
+    overflow-x: auto;
 }
